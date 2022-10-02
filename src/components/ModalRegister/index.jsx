@@ -1,10 +1,30 @@
 import { useState } from "react";
 import { Space, Modal, Input } from "antd";
+import { post } from "../../service";
 
 const ModalRegister = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
 
+  const [user, setUser] = useState({
+    name:"",
+    email:"",
+  });
+
   const handleOpenModal = () => setIsModalOpen(!isModalOpen);
+
+  const handleOnChange = (e) =>{
+    const {name, value} = e.target;
+    setUser({
+      ...user,
+      [name]:value,
+    });
+  };
+
+  const handleOnSubmit = async() => {
+    const response = await post("/user", user);
+    handleOpenModal();
+    await fetchUsers();
+  };
 
   return (
     <>
@@ -21,8 +41,17 @@ const ModalRegister = () => {
             width: "100%",
           }}
         >
-          <Input size="large" placeholder="Ingresa tu correo" />
-          <Input size="large" placeholder="Ingresa tu nombre" />
+          <Input 
+            size="large" 
+            name="email"
+            onChange={handleOnChange}
+            placeholder="Ingresa tu correo"
+            />
+          <Input 
+          size="large" 
+          name="name"
+          onChange={handleOnChange}
+          placeholder="Ingresa tu nombre" />
         </Space>
       </Modal>
     </>
