@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Space, Modal, Input } from "antd";
 import { post } from "../../service";
 
-const ModalRegister = () => {
+const ModalRegister = ({ fetchUsers }) => {
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   const [user, setUser] = useState({
@@ -31,7 +31,7 @@ const ModalRegister = () => {
       <Modal
         title="Ingresa o registrate"
         open={isModalOpen}
-        onOk={handleOpenModal}
+        onOk={handleOnSubmit}
         onCancel={handleOpenModal}
       >
         <Space
