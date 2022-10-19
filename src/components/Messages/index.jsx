@@ -74,7 +74,7 @@ const MessageList = ({ user, messages, fetchMessage }) => {
                 src={user.profile_url}
                 alt=""
               />
-              <h4 className="">
+              <h4 className="titulo-chat">
                 Conversation with <strong>{user.name}</strong>
               </h4>
             </div>

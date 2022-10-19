@@ -18,22 +18,23 @@ const DrawerList = ({ users }) => {
     setMessages(response.data);
   };
   return (
-    <Layout>
-      <Sider
+    <Layout >
+      <Sider 
         theme="light"
         width={300}
         style={{
           overflow: "auto",
           height: "100vh",
+          backgroundColor: "rgb(192, 222, 255)"
         }}
       >
-        <List
+        <List 
           size="large"
           header={<div>Contactos</div>}
           bordered
           dataSource={users}
           renderItem={(item) => (
-            <List.Item
+            <List.Item 
               onClick={async () => {
                 setShowMessages(true);
                 setSelectedUser(item);
@@ -41,7 +42,7 @@ const DrawerList = ({ users }) => {
               }}
               style={{
                 cursor: "pointer",
-              }}
+              }} 
             >
               <List.Item.Meta
                 avatar={

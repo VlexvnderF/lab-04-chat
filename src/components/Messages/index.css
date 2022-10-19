@@ -1,11 +1,17 @@
 .message-list {
   display: flex;
   flex-direction: column;
+  
 }
+.titulo-chat{
+  color: white;
+}
+
 
 .message {
   height: 93vh;
   overflow-y: scroll;
+  
 }
 
 .input-message {
@@ -16,15 +22,17 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  
  }
   
  .text__white {
-  color: #fff;
+  color: rgb(192, 222, 255);
  }
   
  .header__container {
   border-radius: 12px;
-  background-color: #fff !important;
+  background-color: rgb(16, 92, 146) !important;
+  
  }
 
  .message__content {
@@ -32,10 +40,11 @@
   margin-top: 50px;
   padding: 20px;
   overflow: auto;
+  
  }
   
  .message__content__avatar__img {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.66);
   border-radius: 50%;
   padding: 4px;
  }

@@ -1,3 +1,6 @@
+.message__content {
+    background-color: rgb(1, 119, 163);
+   }
 .message__content__text {
     display: flex;
     align-items: center;
@@ -7,7 +10,7 @@
     
    .message__content__image img {
     margin-top: -20px;
-    background-color: rgb(255, 130, 106);
+    background-color: rgba(255, 255, 255, 0.625);
     border-radius: 50%;
     margin-right: 20px;
    }
@@ -15,14 +18,16 @@
    .c__name {
     font-size: 14px;
     font-weight: bold;
+    color: white;
    }
+   
     
    .c__message {
     padding: 12px;
     width: 300px;
     height: 60px;
     overflow: auto;
-    background-color: rgb(194, 255, 230);
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     margin-top: -10px;
    }

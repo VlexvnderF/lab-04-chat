@@ -5,12 +5,13 @@ const HeaderLayout = ({ children })=>{
     const user = JSON.parse(localStorage.getItem("user"));
 
     return(
-        <Layout>
+        <Layout >
             <Header
                 style={{
                     position: "fixed",
                     zIndex: 1,
                     width: "100%",
+                    backgroundColor: "rgb(16, 92, 146)",
                 }}>
                 <div
                     className="logo"

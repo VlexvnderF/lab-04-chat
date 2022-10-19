@@ -46,7 +46,7 @@ const Chat = () => {
     </div>
     */
 
-    <HeaderLayout>
+    <HeaderLayout >
     { users.length > 0 && <DrawerList users={users}/>}
     <ModalRegister fetchUsers={fetchUsers}/>
   </HeaderLayout>
