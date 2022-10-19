@@ -22,6 +22,7 @@ const ModalRegister = ({ fetchUsers }) => {
 
   const handleOnSubmit = async() => {
     const response = await post("/user", user);
+    localStorage.setItem("user", JSON.stringify(response.data));
     handleOpenModal();
     await fetchUsers();
   };
